@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Meteor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- loading -->
+<div id="loader">
+  <div class="loader-planet"></div>
+  <h2>Loading Space...</h2>
+</div>
+
+<!-- cursor glow -->
+<div class="cursor-glow"></div>
+
+<!-- stars -->
+<div class="stars"></div>
+
+<!-- nebula -->
+<div class="nebula"></div>
+
+<header>
+  <h1> Simulasi Meteor vs Bumi </h1>
+  <p class="subtitle">Interactive Science Project</p>
+</header>
+
+<section class="planet-section">
+
+  <div class="solar-system">
+
+    <div class="sun"></div>
+
+    <div class="orbit orbit1">
+      <div class="planet mercury"></div>
+    </div>
+
+    <div class="orbit orbit2">
+      <div class="planet venus"></div>
+    </div>
+
+    <div class="orbit orbit3">
+      <div class="earth" onclick="infoBumi()"></div>
+    </div>
+
+    <div class="orbit orbit4">
+      <div class="planet mars"></div>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <button onclick="jatuhkanMeteor()">☄️ Meteor</button>
+    <button onclick="playSound()">🎵 Space Sound</button>
+  </div>
+
+</section>
+
+<section class="card">
+  <h2> GTW </h2>
+  <p>V zvtug yvxr uvz</p>
+</section>
+
+<section class="card">
+  <h2>GTW JUGA</h2>
+  <ul>
+    <li>SSBtaWdodCBsaWtlIGhpbQ==</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>HMM</h2>
+  <ol>
+    <li>JBUW4Z3FONQW24DMMUQGS3THEI======</li>
+  </ol>
+</section>
+
+<section class="card funfact">
+  <h2>JUJUR GTW</h2>
+  <p>
+   .. / -- .. --. .... - / .-.. .. -.- . / .... .. --
+  </p>
+</section>
+
+<div class="popup" id="popup">
+  🌍 Atmosfer bumi melindungi kita dari meteor kecil!
+  <br><br>
+  <button onclick="tutup()">Tutup</button>
+</div>
+
+<audio id="sound">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8d0b6cd6f.mp3">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
