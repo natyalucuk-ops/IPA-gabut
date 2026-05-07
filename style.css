@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#020617;
+  color:white;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* LOADER */
+#loader{
+  position:fixed;
+  inset:0;
+  background:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.loader-planet{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:linear-gradient(cyan,#2563eb);
+  animation:spin 2s linear infinite;
+  box-shadow:0 0 30px cyan;
+}
+
+#loader h2{
+  margin-top:20px;
+  color:cyan;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* cursor glow */
+.cursor-glow{
+  position:fixed;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:cyan;
+  pointer-events:none;
+  filter:blur(10px);
+  z-index:999;
+}
+
+/* stars */
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity:0.4;
+  z-index:-3;
+}
+
+/* nebula */
+.nebula{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+  radial-gradient(circle at top left, rgba(0,255,255,0.2), transparent 40%),
+  radial-gradient(circle at bottom right, rgba(139,92,246,0.2), transparent 40%);
+  z-index:-2;
+}
+
+/* header */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+
+h1{
+  font-size:42px;
+  color:#38bdf8;
+}
+
+.subtitle{
+  color:#94a3b8;
+}
+
+/* solar system */
+.solar-system{
+  position:relative;
+  width:500px;
+  height:500px;
+  margin:auto;
+}
+
+.sun{
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:radial-gradient(yellow,orange);
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 50px orange;
+}
+
+.orbit{
+  position:absolute;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.orbit1{width:140px;height:140px;animation:spin 6s linear infinite;}
+.orbit2{width:220px;height:220px;animation:spin 10s linear infinite;}
+.orbit3{width:320px;height:320px;animation:spin 14s linear infinite;}
+.orbit4{width:420px;height:420px;animation:spin 18s linear infinite;}
+
+.planet,.earth{
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:50%;
+}
+
+.mercury{
+  width:15px;
+  height:15px;
+  background:gray;
+}
+
+.venus{
+  width:20px;
+  height:20px;
+  background:orange;
+}
+
+.mars{
+  width:18px;
+  height:18px;
+  background:red;
+}
+
+.earth{
+  width:45px;
+  height:45px;
+  background:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');
+  background-size:cover;
+  box-shadow:0 0 20px cyan;
+  cursor:pointer;
+}
+
+/* buttons */
+.buttons{
+  margin-top:20px;
+  text-align:center;
+}
+
+button{
+  padding:12px 20px;
+  margin:10px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(45deg,#06b6d4,#3b82f6);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px cyan;
+}
+
+/* cards */
+.card{
+  width:85%;
+  max-width:800px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
+.card h2{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+.funfact{
+  background:linear-gradient(45deg,#0f172a,#1e3a8a);
+}
+
+/* popup */
+.popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#111827;
+  padding:25px;
+  border-radius:15px;
+  display:none;
+  box-shadow:0 0 20px cyan;
+}
+
+/* mobile */
+@media(max-width:700px){
+
+  .solar-system{
+    width:320px;
+    height:320px;
+  }
+
+  .orbit1{width:100px;height:100px;}
+  .orbit2{width:160px;height:160px;}
+  .orbit3{width:220px;height:220px;}
+  .orbit4{width:300px;height:300px;}
+
+  h1{
+    font-size:30px;
+  }
+}
